@@ -1,0 +1,21 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  taskname: MyString
+  priority: MyString
+  startdate: MyString
+  enddate: MyString
+  completiondate: MyString
+  status: MyString
+  alert: MyString
+  comments: MyString
+
+two:
+  taskname: MyString
+  priority: MyString
+  startdate: MyString
+  enddate: MyString
+  completiondate: MyString
+  status: MyString
+  alert: MyString
+  comments: MyString

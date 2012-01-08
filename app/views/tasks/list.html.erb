@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>
+Task List
+</title>
+<%= stylesheet_link_tag :all %>
+</head>
+<body>
+<div>
+<% @tasks.each do | task | %>
+<p><%= task.taskname %></p>
+<% end %>   
+</div>
+</body>
+</html>

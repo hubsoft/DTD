@@ -1,0 +1,1656 @@
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mMysql::Error: query: not connected: CREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mMysql::Error: query: not connected: CREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mMysql::Error: query: not connected: CREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mMysql::Error: query: not connected: CREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (281.2ms)[0m   [0;1mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (46.9ms)[0m   [0mSHOW KEYS FROM `schema_migrations`[0m
+  [4;36;1mSQL (343.8ms)[0m   [0;1mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (15.6ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateUsers (20120108184436)
+  [4;35;1mSQL (78.1ms)[0m   [0mCREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `password` varchar(255), `designation` varchar(255), `mobileno` varchar(255), `email` varchar(255), `role_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (31.2ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20120108184436')[0m
+Migrating to CreateRoles (20120108184522)
+  [4;35;1mSQL (78.1ms)[0m   [0mCREATE TABLE `roles` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `description` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (46.9ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20120108184522')[0m
+Migrating to CreateTasks (20120108184542)
+  [4;35;1mSQL (78.1ms)[0m   [0mCREATE TABLE `tasks` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `taskname` varchar(255), `priority` varchar(255), `startdate` varchar(255), `enddate` varchar(255), `completiondate` varchar(255), `status` varchar(255), `alert` varchar(255), `comments` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (15.6ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20120108184542')[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (31.2ms)[0m   [0;1mSHOW FIELDS FROM `roles`[0m
+  [4;35;1mSQL (15.6ms)[0m   [0mdescribe `roles`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW KEYS FROM `roles`[0m
+  [4;35;1mSQL (15.6ms)[0m   [0mSHOW FIELDS FROM `tasks`[0m
+  [4;36;1mSQL (15.6ms)[0m   [0;1mdescribe `tasks`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW KEYS FROM `tasks`[0m
+  [4;36;1mSQL (15.6ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mdescribe `users`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW KEYS FROM `users`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing WelcomeController#login (for 127.0.0.1 at 2012-01-09 01:22:47) [GET]
+
+ActionView::MissingTemplate (Missing template welcome/login.erb in view path app/views):
+  c:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing WelcomeController#login (for 127.0.0.1 at 2012-01-09 01:22:55) [GET]
+
+ActionView::MissingTemplate (Missing template welcome/login.erb in view path app/views):
+  c:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing WelcomeController#login (for 127.0.0.1 at 2012-01-09 01:23:50) [GET]
+
+NameError (uninitialized constant WelcomeController::Login):
+  app/controllers/welcome_controller.rb:3:in `login'
+  c:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (187.5ms)
+Rendered rescues/_request_and_response (15.6ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing WelcomeController#login (for 127.0.0.1 at 2012-01-09 01:24:12) [GET]
+
+ArgumentError (wrong number of arguments):
+  app/controllers/welcome_controller.rb:3:in `test'
+  app/controllers/welcome_controller.rb:3:in `login'
+  c:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (171.9ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing WelcomeController#login (for 127.0.0.1 at 2012-01-09 01:24:25) [GET]
+
+NameError (undefined local variable or method `asdasdasfafa' for #<WelcomeController:0x3814200>):
+  app/controllers/welcome_controller.rb:3:in `login'
+  c:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (171.9ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing WelcomeController#login (for 127.0.0.1 at 2012-01-09 01:24:38) [GET]
+
+ActionView::MissingTemplate (Missing template welcome/login.erb in view path app/views):
+  c:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing WelcomeController#login (for 127.0.0.1 at 2012-01-09 01:26:13) [GET]
+
+ActionView::MissingTemplate (Missing template welcome/login.erb in view path app/views):
+  c:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing WelcomeController#login (for 127.0.0.1 at 2012-01-09 01:26:18) [GET]
+
+ActionView::MissingTemplate (Missing template welcome/login.erb in view path app/views):
+  c:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing WelcomeController#login (for 127.0.0.1 at 2012-01-09 01:26:20) [GET]
+
+ActionView::MissingTemplate (Missing template welcome/login.erb in view path app/views):
+  c:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing WelcomeController#login (for 127.0.0.1 at 2012-01-09 01:28:30) [GET]
+Rendering template within layouts/login
+Rendering welcome/login
+ERROR: compiling _run_erb_app47views47welcome47login46html46erb RAISED compile error
+c:/Documents and Settings/Vinoth/.ssh/Dotodo/app/views/welcome/login.html.erb:7: syntax error, unexpected '=', expecting kEND
+;  = stylesheet_link_tag :all ; @o...
+    ^
+Function body:           def _run_erb_app47views47welcome47login46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<!DOCTYPE html>\n<html>\n<head>\n<title>\nDo To Do\n</title>\n"
+
+
+
+
+
+;  = stylesheet_link_tag :all ; @output_buffer.concat "\n</head>\n<body>\n<div>\n"
+
+
+
+;  form_tag "/login" do ; @output_buffer.concat "\nUser Name:"
+; @output_buffer.concat(( text_field :username).to_s); @output_buffer.concat "\nPassword:"
+; @output_buffer.concat(( text_field :password).to_s); @output_buffer.concat "\n"
+; @output_buffer.concat(( submit_tag "sign in").to_s); @output_buffer.concat "\n"
+; end; @output_buffer.concat "\n</div>\n</body>\n</html>\n"
+
+
+
+; @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: c:/Documents and Settings/Vinoth/.ssh/Dotodo/app/views/welcome/login.html.erb:22:in `compile!'
+c:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/renderable.rb:61:in `compile'
+c:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/renderable.rb:28:in `render'
+c:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/template.rb:205:in `render_template'
+c:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/base.rb:265:in `render'
+c:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/base.rb:348:in `_render_with_layout'
+c:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/base.rb:262:in `render'
+c:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:1250:in `render_for_file'
+c:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:936:in `render_without_benchmark'
+c:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:51:in `render'
+c:/Ruby187/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+c:/Ruby187/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+c:/Ruby187/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+c:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:51:in `render'
+c:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:1326:in `default_render'
+c:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:1332:in `perform_action_without_filters'
+c:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/filters.rb:617:in `call_filters'
+c:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+c:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+c:/Ruby187/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+c:/Ruby187/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+c:/Ruby187/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+c:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+c:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+c:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/flash.rb:151:in `perform_action'
+c:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:532:in `send'
+c:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:532:in `process_without_filters'
+c:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/filters.rb:606:in `process'
+c:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:391:in `process'
+c:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:386:in `call'
+c:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/routing/route_set.rb:438:in `call'
+c:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:87:in `dispatch'
+c:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:121:in `_call'
+c:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+c:/Ruby187/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:29:in `call'
+c:/Ruby187/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:29:in `call'
+c:/Ruby187/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+c:/Ruby187/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:9:in `cache'
+c:/Ruby187/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:28:in `call'
+c:/Ruby187/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+c:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/string_coercion.rb:25:in `call'
+c:/Ruby187/lib/ruby/gems/1.8/gems/rack-1.1.3/lib/rack/head.rb:9:in `call'
+c:/Ruby187/lib/ruby/gems/1.8/gems/rack-1.1.3/lib/rack/methodoverride.rb:24:in `call'
+c:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/params_parser.rb:15:in `call'
+c:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/session/cookie_store.rb:99:in `call'
+c:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/failsafe.rb:26:in `call'
+c:/Ruby187/lib/ruby/gems/1.8/gems/rack-1.1.3/lib/rack/lock.rb:11:in `call'
+c:/Ruby187/lib/ruby/gems/1.8/gems/rack-1.1.3/lib/rack/lock.rb:11:in `synchronize'
+c:/Ruby187/lib/ruby/gems/1.8/gems/rack-1.1.3/lib/rack/lock.rb:11:in `call'
+c:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:114:in `call'
+c:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/reloader.rb:34:in `run'
+c:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:108:in `call'
+c:/Ruby187/lib/ruby/gems/1.8/gems/rails-2.3.8/lib/rails/rack/static.rb:31:in `call'
+c:/Ruby187/lib/ruby/gems/1.8/gems/rack-1.1.3/lib/rack/urlmap.rb:47:in `call'
+c:/Ruby187/lib/ruby/gems/1.8/gems/rack-1.1.3/lib/rack/urlmap.rb:41:in `each'
+c:/Ruby187/lib/ruby/gems/1.8/gems/rack-1.1.3/lib/rack/urlmap.rb:41:in `call'
+c:/Ruby187/lib/ruby/gems/1.8/gems/rails-2.3.8/lib/rails/rack/log_tailer.rb:17:in `call'
+c:/Ruby187/lib/ruby/gems/1.8/gems/rack-1.1.3/lib/rack/content_length.rb:13:in `call'
+c:/Ruby187/lib/ruby/gems/1.8/gems/rack-1.1.3/lib/rack/handler/webrick.rb:48:in `service'
+c:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+c:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+c:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+c:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+c:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+c:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+c:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+c:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+c:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+c:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+c:/Ruby187/lib/ruby/gems/1.8/gems/rack-1.1.3/lib/rack/handler/webrick.rb:14:in `run'
+c:/Ruby187/lib/ruby/gems/1.8/gems/rails-2.3.8/lib/commands/server.rb:111
+c:/Ruby187/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:29:in `gem_original_require'
+c:/Ruby187/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:29:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+c:/Documents and Settings/Vinoth/.ssh/Dotodo/app/views/welcome/login.html.erb:7: syntax error, unexpected '=', expecting kEND
+;  = stylesheet_link_tag :all ; @o...
+    ^) on line #7 of app/views/welcome/login.html.erb:
+4: <title>
+5: Do To Do
+6: </title>
+7: <% = stylesheet_link_tag :all %>
+8: </head>
+9: <body>
+10: <div>
+
+    app/views/welcome/login.html.erb:22:in `compile!'
+    c:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    c:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    c:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    c:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    c:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    c:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    c:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    c:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    c:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    c:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (171.9ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing WelcomeController#login (for 127.0.0.1 at 2012-01-09 01:28:59) [GET]
+Rendering template within layouts/login
+Rendering welcome/login
+
+ActionView::TemplateError (wrong number of arguments (1 for 2)) on line #12 of app/views/welcome/login.html.erb:
+9: <body>
+10: <div>
+11: <% form_tag "/login" do %>
+12: User Name:<%= text_field :username%>
+13: Password:<%= text_field :password%>
+14: <%= submit_tag "sign in"%>
+15: <%end%>
+
+    app/views/welcome/login.html.erb:12:in `text_field'
+    app/views/welcome/login.html.erb:12
+    app/views/welcome/login.html.erb:11
+    c:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    c:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    c:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    c:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    c:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    c:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    c:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    c:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    c:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    c:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (406.2ms)
+Rendered rescues/_request_and_response (15.6ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing WelcomeController#login (for 127.0.0.1 at 2012-01-09 01:29:30) [GET]
+Rendering template within layouts/login
+Rendering welcome/login
+ERROR: compiling _run_erb_app47views47layouts47login46html46erb RAISED compile error
+c:/Documents and Settings/Vinoth/.ssh/Dotodo/app/views/layouts/login.html.erb:7: syntax error, unexpected '=', expecting kEND
+;  = stylesheet_link_tag :all ; @o...
+    ^
+Function body:           def _run_erb_app47views47layouts47login46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<!DOCTYPE html>\n<html>\n<head>\n<title>\nDo To Do\n</title>\n"
+
+
+
+
+
+;  = stylesheet_link_tag :all ; @output_buffer.concat "\n</head>\n<body>\n<div>\n"
+
+
+
+;  form_tag "/login" do ; @output_buffer.concat "\nUser Name:"
+; @output_buffer.concat(( text_field :username).to_s); @output_buffer.concat "\nPassword:"
+; @output_buffer.concat(( text_field :password).to_s); @output_buffer.concat "\n"
+; @output_buffer.concat(( submit_tag "sign in").to_s); @output_buffer.concat "\n"
+; end; @output_buffer.concat "\n</div>\n</body>\n</html>\n"
+
+
+
+; @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: c:/Documents and Settings/Vinoth/.ssh/Dotodo/app/views/layouts/login.html.erb:22:in `compile!'
+c:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/renderable.rb:61:in `compile'
+c:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/renderable.rb:28:in `render'
+c:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/template.rb:205:in `render_template'
+c:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/base.rb:265:in `render'
+c:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/base.rb:352:in `_render_with_layout'
+c:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/base.rb:262:in `render'
+c:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:1250:in `render_for_file'
+c:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:936:in `render_without_benchmark'
+c:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:51:in `render'
+c:/Ruby187/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+c:/Ruby187/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+c:/Ruby187/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+c:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:51:in `render'
+c:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:1326:in `default_render'
+c:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:1332:in `perform_action_without_filters'
+c:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/filters.rb:617:in `call_filters'
+c:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+c:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+c:/Ruby187/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+c:/Ruby187/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+c:/Ruby187/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+c:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+c:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+c:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/flash.rb:151:in `perform_action'
+c:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:532:in `send'
+c:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:532:in `process_without_filters'
+c:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/filters.rb:606:in `process'
+c:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:391:in `process'
+c:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:386:in `call'
+c:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/routing/route_set.rb:438:in `call'
+c:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:87:in `dispatch'
+c:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:121:in `_call'
+c:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+c:/Ruby187/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:29:in `call'
+c:/Ruby187/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:29:in `call'
+c:/Ruby187/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+c:/Ruby187/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:9:in `cache'
+c:/Ruby187/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:28:in `call'
+c:/Ruby187/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+c:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/string_coercion.rb:25:in `call'
+c:/Ruby187/lib/ruby/gems/1.8/gems/rack-1.1.3/lib/rack/head.rb:9:in `call'
+c:/Ruby187/lib/ruby/gems/1.8/gems/rack-1.1.3/lib/rack/methodoverride.rb:24:in `call'
+c:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/params_parser.rb:15:in `call'
+c:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/session/cookie_store.rb:99:in `call'
+c:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/failsafe.rb:26:in `call'
+c:/Ruby187/lib/ruby/gems/1.8/gems/rack-1.1.3/lib/rack/lock.rb:11:in `call'
+c:/Ruby187/lib/ruby/gems/1.8/gems/rack-1.1.3/lib/rack/lock.rb:11:in `synchronize'
+c:/Ruby187/lib/ruby/gems/1.8/gems/rack-1.1.3/lib/rack/lock.rb:11:in `call'
+c:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:114:in `call'
+c:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/reloader.rb:34:in `run'
+c:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:108:in `call'
+c:/Ruby187/lib/ruby/gems/1.8/gems/rails-2.3.8/lib/rails/rack/static.rb:31:in `call'
+c:/Ruby187/lib/ruby/gems/1.8/gems/rack-1.1.3/lib/rack/urlmap.rb:47:in `call'
+c:/Ruby187/lib/ruby/gems/1.8/gems/rack-1.1.3/lib/rack/urlmap.rb:41:in `each'
+c:/Ruby187/lib/ruby/gems/1.8/gems/rack-1.1.3/lib/rack/urlmap.rb:41:in `call'
+c:/Ruby187/lib/ruby/gems/1.8/gems/rails-2.3.8/lib/rails/rack/log_tailer.rb:17:in `call'
+c:/Ruby187/lib/ruby/gems/1.8/gems/rack-1.1.3/lib/rack/content_length.rb:13:in `call'
+c:/Ruby187/lib/ruby/gems/1.8/gems/rack-1.1.3/lib/rack/handler/webrick.rb:48:in `service'
+c:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+c:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+c:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+c:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+c:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+c:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+c:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+c:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+c:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+c:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+c:/Ruby187/lib/ruby/gems/1.8/gems/rack-1.1.3/lib/rack/handler/webrick.rb:14:in `run'
+c:/Ruby187/lib/ruby/gems/1.8/gems/rails-2.3.8/lib/commands/server.rb:111
+c:/Ruby187/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:29:in `gem_original_require'
+c:/Ruby187/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:29:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+c:/Documents and Settings/Vinoth/.ssh/Dotodo/app/views/layouts/login.html.erb:7: syntax error, unexpected '=', expecting kEND
+;  = stylesheet_link_tag :all ; @o...
+    ^) on line #7 of app/views/layouts/login.html.erb:
+4: <title>
+5: Do To Do
+6: </title>
+7: <% = stylesheet_link_tag :all %>
+8: </head>
+9: <body>
+10: <div>
+
+    app/views/layouts/login.html.erb:22:in `compile!'
+    c:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    c:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    c:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    c:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    c:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    c:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    c:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    c:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    c:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    c:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (171.9ms)
+Rendered rescues/_request_and_response (15.6ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing WelcomeController#login (for 127.0.0.1 at 2012-01-09 01:30:11) [GET]
+Rendering template within layouts/login
+Rendering welcome/login
+ERROR: compiling _run_erb_app47views47layouts47login46html46erb RAISED compile error
+c:/Documents and Settings/Vinoth/.ssh/Dotodo/app/views/layouts/login.html.erb:7: syntax error, unexpected '=', expecting kEND
+;  = stylesheet_link_tag :all ; @o...
+    ^
+Function body:           def _run_erb_app47views47layouts47login46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<!DOCTYPE html>\n<html>\n<head>\n<title>\nDo To Do\n</title>\n"
+
+
+
+
+
+;  = stylesheet_link_tag :all ; @output_buffer.concat "\n</head>\n<body>\n<div>\n"
+
+
+
+;  form_tag "/login" do ; @output_buffer.concat "\nUser Name:"
+; @output_buffer.concat(( text_field :username).to_s); @output_buffer.concat "\nPassword:"
+; @output_buffer.concat(( text_field :password).to_s); @output_buffer.concat "\n"
+; @output_buffer.concat(( submit_tag "sign in").to_s); @output_buffer.concat "\n"
+; end; @output_buffer.concat "\n</div>\n</body>\n</html>\n"
+
+
+
+; @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: c:/Documents and Settings/Vinoth/.ssh/Dotodo/app/views/layouts/login.html.erb:22:in `compile!'
+c:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/renderable.rb:61:in `compile'
+c:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/renderable.rb:28:in `render'
+c:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/template.rb:205:in `render_template'
+c:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/base.rb:265:in `render'
+c:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/base.rb:352:in `_render_with_layout'
+c:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/base.rb:262:in `render'
+c:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:1250:in `render_for_file'
+c:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:936:in `render_without_benchmark'
+c:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:51:in `render'
+c:/Ruby187/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+c:/Ruby187/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+c:/Ruby187/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+c:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:51:in `render'
+c:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:1326:in `default_render'
+c:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:1332:in `perform_action_without_filters'
+c:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/filters.rb:617:in `call_filters'
+c:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+c:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+c:/Ruby187/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+c:/Ruby187/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+c:/Ruby187/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+c:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+c:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+c:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/flash.rb:151:in `perform_action'
+c:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:532:in `send'
+c:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:532:in `process_without_filters'
+c:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/filters.rb:606:in `process'
+c:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:391:in `process'
+c:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:386:in `call'
+c:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/routing/route_set.rb:438:in `call'
+c:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:87:in `dispatch'
+c:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:121:in `_call'
+c:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+c:/Ruby187/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:29:in `call'
+c:/Ruby187/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:29:in `call'
+c:/Ruby187/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+c:/Ruby187/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:9:in `cache'
+c:/Ruby187/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:28:in `call'
+c:/Ruby187/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+c:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/string_coercion.rb:25:in `call'
+c:/Ruby187/lib/ruby/gems/1.8/gems/rack-1.1.3/lib/rack/head.rb:9:in `call'
+c:/Ruby187/lib/ruby/gems/1.8/gems/rack-1.1.3/lib/rack/methodoverride.rb:24:in `call'
+c:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/params_parser.rb:15:in `call'
+c:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/session/cookie_store.rb:99:in `call'
+c:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/failsafe.rb:26:in `call'
+c:/Ruby187/lib/ruby/gems/1.8/gems/rack-1.1.3/lib/rack/lock.rb:11:in `call'
+c:/Ruby187/lib/ruby/gems/1.8/gems/rack-1.1.3/lib/rack/lock.rb:11:in `synchronize'
+c:/Ruby187/lib/ruby/gems/1.8/gems/rack-1.1.3/lib/rack/lock.rb:11:in `call'
+c:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:114:in `call'
+c:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/reloader.rb:34:in `run'
+c:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:108:in `call'
+c:/Ruby187/lib/ruby/gems/1.8/gems/rails-2.3.8/lib/rails/rack/static.rb:31:in `call'
+c:/Ruby187/lib/ruby/gems/1.8/gems/rack-1.1.3/lib/rack/urlmap.rb:47:in `call'
+c:/Ruby187/lib/ruby/gems/1.8/gems/rack-1.1.3/lib/rack/urlmap.rb:41:in `each'
+c:/Ruby187/lib/ruby/gems/1.8/gems/rack-1.1.3/lib/rack/urlmap.rb:41:in `call'
+c:/Ruby187/lib/ruby/gems/1.8/gems/rails-2.3.8/lib/rails/rack/log_tailer.rb:17:in `call'
+c:/Ruby187/lib/ruby/gems/1.8/gems/rack-1.1.3/lib/rack/content_length.rb:13:in `call'
+c:/Ruby187/lib/ruby/gems/1.8/gems/rack-1.1.3/lib/rack/handler/webrick.rb:48:in `service'
+c:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+c:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+c:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+c:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+c:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+c:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+c:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+c:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+c:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+c:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+c:/Ruby187/lib/ruby/gems/1.8/gems/rack-1.1.3/lib/rack/handler/webrick.rb:14:in `run'
+c:/Ruby187/lib/ruby/gems/1.8/gems/rails-2.3.8/lib/commands/server.rb:111
+c:/Ruby187/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:29:in `gem_original_require'
+c:/Ruby187/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:29:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+c:/Documents and Settings/Vinoth/.ssh/Dotodo/app/views/layouts/login.html.erb:7: syntax error, unexpected '=', expecting kEND
+;  = stylesheet_link_tag :all ; @o...
+    ^) on line #7 of app/views/layouts/login.html.erb:
+4: <title>
+5: Do To Do
+6: </title>
+7: <% = stylesheet_link_tag :all %>
+8: </head>
+9: <body>
+10: <div>
+
+    app/views/layouts/login.html.erb:22:in `compile!'
+    c:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    c:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    c:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    c:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    c:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    c:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    c:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    c:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    c:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    c:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (390.6ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing WelcomeController#login (for 127.0.0.1 at 2012-01-09 01:30:33) [GET]
+Rendering welcome/login
+Completed in 16ms (View: 16, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing WelcomeController#login (for 127.0.0.1 at 2012-01-09 01:33:05) [GET]
+Rendering welcome/login
+Completed in 31ms (View: 31, DB: 0) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-01-09 01:33:24) [POST]
+  Parameters: {"commit"=>"sign in", "authenticity_token"=>"Dt0qeMixgNoSZKar/muB1flmrmQPkOGiouKkxpDBYdg=", "username"=>"asda", "password"=>"asdad"}
+
+ActionController::RoutingError (No route matches "/login" with {:method=>:post}):
+  c:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-01-09 01:34:22) [GET]
+
+ActionController::RoutingError (No route matches "/login" with {:method=>:get}):
+  c:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing WelcomeController#login (for 127.0.0.1 at 2012-01-09 01:34:29) [GET]
+Rendering welcome/login
+Completed in 31ms (View: 31, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing WelcomeController#login (for 127.0.0.1 at 2012-01-09 01:34:31) [GET]
+Rendering welcome/login
+Completed in 16ms (View: 16, DB: 0) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-01-09 01:34:36) [POST]
+  Parameters: {"commit"=>"sign in", "authenticity_token"=>"Dt0qeMixgNoSZKar/muB1flmrmQPkOGiouKkxpDBYdg=", "username"=>"ad", "password"=>"asd"}
+
+ActionController::RoutingError (No route matches "/verifylogin" with {:method=>:post}):
+  c:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-01-09 01:41:52) [GET]
+
+ActionController::RoutingError (No route matches "/" with {:method=>:get}):
+  c:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-01-09 01:41:59) [GET]
+
+ActionController::RoutingError (No route matches "/" with {:method=>:get}):
+  c:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-01-09 01:42:00) [GET]
+
+ActionController::RoutingError (No route matches "/" with {:method=>:get}):
+  c:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-01-09 01:42:08) [GET]
+
+ActionController::RoutingError (No route matches "/" with {:method=>:get}):
+  c:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#login (for 127.0.0.1 at 2012-01-09 01:42:30) [GET]
+
+SyntaxError (c:/Documents and Settings/Vinoth/.ssh/Dotodo/app/controllers/welcome_controller.rb:9: syntax error, unexpected ',', expecting tASSOC
+...assword=?", params[:username], params[:password])
+                              ^
+c:/Documents and Settings/Vinoth/.ssh/Dotodo/app/controllers/welcome_controller.rb:9: syntax error, unexpected ')', expecting kEND):
+  c:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (203.1ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing WelcomeController#login (for 127.0.0.1 at 2012-01-09 01:43:04) [GET]
+Rendering welcome/login
+Completed in 0ms (View: 0, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-01-09 01:43:09) [POST]
+  Parameters: {"commit"=>"sign in", "authenticity_token"=>"Dt0qeMixgNoSZKar/muB1flmrmQPkOGiouKkxpDBYdg=", "username"=>"ads", "password"=>"asda"}
+
+ActionController::RoutingError (No route matches "/verifylogin" with {:method=>:post}):
+  c:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing WelcomeController#verifylogin (for 127.0.0.1 at 2012-01-09 01:43:43) [POST]
+  Parameters: {"commit"=>"sign in", "authenticity_token"=>"Dt0qeMixgNoSZKar/muB1flmrmQPkOGiouKkxpDBYdg=", "username"=>"ads", "password"=>"asda"}
+
+NameError (undefined local variable or method `asdasd' for #<WelcomeController:0x3498d98>):
+  app/controllers/welcome_controller.rb:8:in `verifylogin'
+  c:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (359.4ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing WelcomeController#login (for 127.0.0.1 at 2012-01-09 01:47:29) [GET]
+Rendering welcome/login
+Completed in 31ms (View: 31, DB: 0) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing WelcomeController#verifylogin (for 127.0.0.1 at 2012-01-09 01:47:33) [POST]
+  Parameters: {"commit"=>"sign in", "authenticity_token"=>"Dt0qeMixgNoSZKar/muB1flmrmQPkOGiouKkxpDBYdg=", "username"=>"asdds", "password"=>"ada"}
+
+ActiveRecord::RecordNotFound (Couldn't find User without an ID):
+  app/controllers/welcome_controller.rb:8:in `verifylogin'
+  c:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (171.9ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing WelcomeController#login (for 127.0.0.1 at 2012-01-09 01:48:15) [GET]
+Rendering welcome/login
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing WelcomeController#verifylogin (for 127.0.0.1 at 2012-01-09 01:48:20) [POST]
+  Parameters: {"commit"=>"sign in", "authenticity_token"=>"Dt0qeMixgNoSZKar/muB1flmrmQPkOGiouKkxpDBYdg=", "username"=>"asda", "password"=>"asdas"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mMysql::Error: Unknown column 'username' in 'where clause': SELECT * FROM `users` WHERE (username='asda' and password='asdas') LIMIT 1[0m
+
+ActiveRecord::StatementInvalid (Mysql::Error: Unknown column 'username' in 'where clause': SELECT * FROM `users` WHERE (username='asda' and password='asdas')  LIMIT 1):
+  app/controllers/welcome_controller.rb:8:in `verifylogin'
+  c:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (359.4ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing WelcomeController#login (for 127.0.0.1 at 2012-01-09 01:49:10) [GET]
+Rendering welcome/login
+Completed in 16ms (View: 16, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing WelcomeController#verifylogin (for 127.0.0.1 at 2012-01-09 01:49:13) [POST]
+  Parameters: {"commit"=>"sign in", "authenticity_token"=>"Dt0qeMixgNoSZKar/muB1flmrmQPkOGiouKkxpDBYdg=", "username"=>"asdsad", "password"=>"asdasd"}
+  [4;35;1mUser Load (31.2ms)[0m   [0mSELECT * FROM `users` WHERE (name='asdsad' and password='asdasd') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed in 47ms (DB: 31) | 302 Found [http://localhost/verifylogin]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing WelcomeController#login (for 127.0.0.1 at 2012-01-09 01:49:14) [GET]
+Rendering welcome/login
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing WelcomeController#verifylogin (for 127.0.0.1 at 2012-01-09 01:49:17) [POST]
+  Parameters: {"commit"=>"sign in", "authenticity_token"=>"Dt0qeMixgNoSZKar/muB1flmrmQPkOGiouKkxpDBYdg=", "username"=>"asdasd", "password"=>"asdasdasd"}
+  [4;36;1mUser Load (15.6ms)[0m   [0;1mSELECT * FROM `users` WHERE (name='asdasd' and password='asdasdasd') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed in 31ms (DB: 16) | 302 Found [http://localhost/verifylogin]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing WelcomeController#login (for 127.0.0.1 at 2012-01-09 01:49:18) [GET]
+Rendering welcome/login
+Completed in 16ms (View: 16, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing WelcomeController#login (for 127.0.0.1 at 2012-01-09 01:51:32) [GET]
+Rendering welcome/login
+Completed in 31ms (View: 31, DB: 0) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing WelcomeController#verifylogin (for 127.0.0.1 at 2012-01-09 01:51:44) [POST]
+  Parameters: {"commit"=>"sign in", "authenticity_token"=>"Dt0qeMixgNoSZKar/muB1flmrmQPkOGiouKkxpDBYdg=", "username"=>"asa", "password"=>"asdda"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (name='asa' and password='asdda') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed in 16ms (DB: 0) | 302 Found [http://localhost/verifylogin]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing WelcomeController#login (for 127.0.0.1 at 2012-01-09 01:51:44) [GET]
+Rendering welcome/login
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing WelcomeController#verifylogin (for 127.0.0.1 at 2012-01-09 01:51:50) [POST]
+  Parameters: {"commit"=>"sign in", "authenticity_token"=>"Dt0qeMixgNoSZKar/muB1flmrmQPkOGiouKkxpDBYdg=", "username"=>"asdas", "password"=>"asdsad"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (name='asdas' and password='asdsad') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed in 16ms (DB: 0) | 302 Found [http://localhost/verifylogin]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing WelcomeController#login (for 127.0.0.1 at 2012-01-09 01:51:50) [GET]
+Rendering welcome/login
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing WelcomeController#verifylogin (for 127.0.0.1 at 2012-01-09 01:51:58) [POST]
+  Parameters: {"commit"=>"sign in", "authenticity_token"=>"Dt0qeMixgNoSZKar/muB1flmrmQPkOGiouKkxpDBYdg=", "username"=>"asdsad", "password"=>"asdad"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (name='asdsad' and password='asdad') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed in 203ms (DB: 0) | 302 Found [http://localhost/verifylogin]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing WelcomeController#login (for 127.0.0.1 at 2012-01-09 01:51:58) [GET]
+Rendering welcome/login
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing WelcomeController#login (for 127.0.0.1 at 2012-01-09 01:52:03) [GET]
+Rendering welcome/login
+Completed in 16ms (View: 16, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (15.6ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (31.2ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `designation`, `updated_at`, `role_id`, `mobileno`, `password`, `email`) VALUES('vinoth', '2012-01-08 21:19:52', NULL, '2012-01-08 21:19:52', NULL, NULL, 'vinoth', 'care.hubcs@gmail.com')[0m
+  [4;36;1mSQL (125.0ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` LIMIT 1[0m
+  [4;36;1mRole Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `roles`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mRole Create (15.6ms)[0m   [0;1mINSERT INTO `roles` (`name`, `created_at`, `updated_at`, `description`) VALUES('superuser', '2012-01-08 21:21:03', '2012-01-08 21:21:03', NULL)[0m
+  [4;35;1mSQL (78.1ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (62.5ms)[0m   [0mUPDATE `users` SET `updated_at` = '2012-01-08 21:21:35', `role_id` = 1 WHERE `id` = 1[0m
+  [4;36;1mSQL (31.2ms)[0m   [0;1mCOMMIT[0m
+  [4;36;1mSQL (15.6ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.0ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `designation`, `updated_at`, `role_id`, `mobileno`, `password`, `email`) VALUES('mani', '2012-01-08 21:24:00', NULL, '2012-01-08 21:24:00', NULL, NULL, 'mani', NULL)[0m
+  [4;36;1mSQL (359.4ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mRole Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `roles`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mRole Create (0.0ms)[0m   [0mINSERT INTO `roles` (`name`, `created_at`, `updated_at`, `description`) VALUES('employee', '2012-01-08 21:24:30', '2012-01-08 21:24:30', NULL)[0m
+  [4;36;1mSQL (31.2ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mUser Load (31.2ms)[0m   [0mSELECT * FROM `users` ORDER BY users.id DESC LIMIT 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE `users` SET `updated_at` = '2012-01-08 21:25:01', `role_id` = 2 WHERE `id` = 2[0m
+  [4;36;1mSQL (31.2ms)[0m   [0;1mCOMMIT[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing WelcomeController#login (for 127.0.0.1 at 2012-01-09 02:56:23) [GET]
+Rendering welcome/login
+Completed in 94ms (View: 78, DB: 0) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing WelcomeController#verifylogin (for 127.0.0.1 at 2012-01-09 02:56:28) [POST]
+  Parameters: {"commit"=>"sign in", "authenticity_token"=>"Dt0qeMixgNoSZKar/muB1flmrmQPkOGiouKkxpDBYdg=", "username"=>"a", "password"=>"a"}
+  [4;36;1mUser Load (15.6ms)[0m   [0;1mSELECT * FROM `users` WHERE (name='a' and password='a') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed in 62ms (DB: 16) | 302 Found [http://localhost/verifylogin]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing WelcomeController#login (for 127.0.0.1 at 2012-01-09 02:56:28) [GET]
+Rendering welcome/login
+Completed in 16ms (View: 16, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing WelcomeController#verifylogin (for 127.0.0.1 at 2012-01-09 02:56:33) [POST]
+  Parameters: {"commit"=>"sign in", "authenticity_token"=>"Dt0qeMixgNoSZKar/muB1flmrmQPkOGiouKkxpDBYdg=", "username"=>"vinoth", "password"=>"vinoth"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (name='vinoth' and password='vinoth') LIMIT 1[0m
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mRole Load (15.6ms)[0m   [0mSELECT * FROM `roles` WHERE (id=1) LIMIT 1[0m
+  [4;36;1mRole Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `roles`[0m
+Redirected to http://localhost:3000/userslist
+Completed in 94ms (DB: 16) | 302 Found [http://localhost/verifylogin]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#list (for 127.0.0.1 at 2012-01-09 02:56:33) [GET]
+
+LoadError (Expected c:/Documents and Settings/Vinoth/.ssh/Dotodo/app/controllers/users_controller.rb to define UsersController):
+  c:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (156.2ms)
+Rendered rescues/_request_and_response (15.6ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing WelcomeController#login (for 127.0.0.1 at 2012-01-09 02:56:57) [GET]
+Rendering welcome/login
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://localhost/]
+  [4;35;1mUser Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing WelcomeController#verifylogin (for 127.0.0.1 at 2012-01-09 02:57:02) [POST]
+  Parameters: {"commit"=>"sign in", "authenticity_token"=>"Dt0qeMixgNoSZKar/muB1flmrmQPkOGiouKkxpDBYdg=", "username"=>"v", "password"=>""}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (name='v' and password='') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed in 31ms (DB: 0) | 302 Found [http://localhost/verifylogin]
+  [4;36;1mUser Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing WelcomeController#login (for 127.0.0.1 at 2012-01-09 02:57:02) [GET]
+Rendering welcome/login
+Completed in 172ms (View: 156, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mUser Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing WelcomeController#verifylogin (for 127.0.0.1 at 2012-01-09 02:57:09) [POST]
+  Parameters: {"commit"=>"sign in", "authenticity_token"=>"Dt0qeMixgNoSZKar/muB1flmrmQPkOGiouKkxpDBYdg=", "username"=>"vinoth", "password"=>"vinoth"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (name='vinoth' and password='vinoth') LIMIT 1[0m
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mRole Load (0.0ms)[0m   [0;1mSELECT * FROM `roles` WHERE (id=1) LIMIT 1[0m
+  [4;35;1mRole Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `roles`[0m
+Redirected to http://localhost:3000/userslist
+Completed in 125ms (DB: 16) | 302 Found [http://localhost/verifylogin]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#list (for 127.0.0.1 at 2012-01-09 02:57:09) [GET]
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` [0m
+
+ActionView::MissingTemplate (Missing template users/list.erb in view path app/views):
+  c:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing WelcomeController#login (for 127.0.0.1 at 2012-01-09 02:57:49) [GET]
+Rendering welcome/login
+Completed in 16ms (View: 16, DB: 0) | 200 OK [http://localhost/]
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing WelcomeController#verifylogin (for 127.0.0.1 at 2012-01-09 02:57:54) [POST]
+  Parameters: {"commit"=>"sign in", "authenticity_token"=>"Dt0qeMixgNoSZKar/muB1flmrmQPkOGiouKkxpDBYdg=", "username"=>"vinoth", "password"=>"vinoth"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (name='vinoth' and password='vinoth') LIMIT 1[0m
+  [4;36;1mUser Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mRole Load (0.0ms)[0m   [0mSELECT * FROM `roles` WHERE (id=1) LIMIT 1[0m
+  [4;36;1mRole Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `roles`[0m
+Redirected to http://localhost:3000/userslist
+Completed in 125ms (DB: 16) | 302 Found [http://localhost/verifylogin]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#list (for 127.0.0.1 at 2012-01-09 02:57:55) [GET]
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` [0m
+Rendering users/list
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Completed in 47ms (View: 31, DB: 0) | 200 OK [http://localhost/userslist]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing WelcomeController#verifylogin (for 127.0.0.1 at 2012-01-09 02:58:29) [POST]
+  Parameters: {"commit"=>"sign in", "authenticity_token"=>"Dt0qeMixgNoSZKar/muB1flmrmQPkOGiouKkxpDBYdg=", "username"=>"mani", "password"=>"mani"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (name='mani' and password='mani') LIMIT 1[0m
+  [4;36;1mUser Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mRole Load (0.0ms)[0m   [0mSELECT * FROM `roles` WHERE (id=2) LIMIT 1[0m
+  [4;36;1mRole Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `roles`[0m
+Redirected to http://localhost:3000/taskslist
+Completed in 172ms (DB: 31) | 302 Found [http://localhost/verifylogin]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#list (for 127.0.0.1 at 2012-01-09 02:58:29) [GET]
+
+NameError (uninitialized constant TasksController):
+  c:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (312.5ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (156.2ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateUsers (20120108184436)
+Migrating to CreateRoles (20120108184522)
+Migrating to CreateTasks (20120108184542)
+Migrating to AddNewColumnInTask (20120108213841)
+  [4;35;1mSQL (187.5ms)[0m   [0mALTER TABLE `tasks` ADD `createdby` int(11)[0m
+  [4;36;1mSQL (31.2ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20120108213841')[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW FIELDS FROM `roles`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mdescribe `roles`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW KEYS FROM `roles`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW FIELDS FROM `tasks`[0m
+  [4;36;1mSQL (15.6ms)[0m   [0;1mdescribe `tasks`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW KEYS FROM `tasks`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (15.6ms)[0m   [0mdescribe `users`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW KEYS FROM `users`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mTask Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `tasks`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mTask Create (0.0ms)[0m   [0mINSERT INTO `tasks` (`createdby`, `completiondate`, `created_at`, `enddate`, `comments`, `updated_at`, `priority`, `taskname`, `alert`, `startdate`, `status`) VALUES(2, NULL, '2012-01-08 21:50:51', NULL, NULL, '2012-01-08 21:50:51', NULL, 'web content', NULL, NULL, NULL)[0m
+  [4;36;1mSQL (375.0ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mTask Create (0.0ms)[0m   [0;1mINSERT INTO `tasks` (`createdby`, `completiondate`, `created_at`, `enddate`, `comments`, `updated_at`, `priority`, `taskname`, `alert`, `startdate`, `status`) VALUES(2, NULL, '2012-01-08 21:51:07', NULL, NULL, '2012-01-08 21:51:07', NULL, 'website', NULL, NULL, NULL)[0m
+  [4;35;1mSQL (31.2ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mTask Create (0.0ms)[0m   [0mINSERT INTO `tasks` (`createdby`, `completiondate`, `created_at`, `enddate`, `comments`, `updated_at`, `priority`, `taskname`, `alert`, `startdate`, `status`) VALUES(1, NULL, '2012-01-08 21:51:26', NULL, NULL, '2012-01-08 21:51:26', NULL, 'test', NULL, NULL, NULL)[0m
+  [4;36;1mSQL (31.2ms)[0m   [0;1mCOMMIT[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing WelcomeController#verifylogin (for 127.0.0.1 at 2012-01-09 03:21:33) [POST]
+  Parameters: {"commit"=>"sign in", "authenticity_token"=>"Dt0qeMixgNoSZKar/muB1flmrmQPkOGiouKkxpDBYdg=", "username"=>"vinoth", "password"=>"vinoth"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (name='vinoth' and password='vinoth') LIMIT 1[0m
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mRole Load (0.0ms)[0m   [0mSELECT * FROM `roles` WHERE (id=1) LIMIT 1[0m
+  [4;36;1mRole Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `roles`[0m
+Redirected to http://localhost:3000/userslist
+Completed in 62ms (DB: 16) | 302 Found [http://localhost/verifylogin]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#list (for 127.0.0.1 at 2012-01-09 03:21:33) [GET]
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` [0m
+Rendering users/list
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://localhost/userslist]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing WelcomeController#login (for 127.0.0.1 at 2012-01-09 03:21:38) [GET]
+Rendering welcome/login
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://localhost/]
+  [4;35;1mUser Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing WelcomeController#verifylogin (for 127.0.0.1 at 2012-01-09 03:21:43) [POST]
+  Parameters: {"commit"=>"sign in", "authenticity_token"=>"Dt0qeMixgNoSZKar/muB1flmrmQPkOGiouKkxpDBYdg=", "username"=>"mani", "password"=>"mani"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (name='mani' and password='mani') LIMIT 1[0m
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mRole Load (0.0ms)[0m   [0mSELECT * FROM `roles` WHERE (id=2) LIMIT 1[0m
+  [4;36;1mRole Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `roles`[0m
+Redirected to http://localhost:3000/taskslist
+Completed in 62ms (DB: 0) | 302 Found [http://localhost/verifylogin]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing TasksController#list (for 127.0.0.1 at 2012-01-09 03:21:43) [GET]
+  [4;36;1mTask Load (0.0ms)[0m   [0;1mSELECT * FROM `tasks` WHERE (createdby in (NULL)) [0m
+Rendering tasks/list
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.each) on line #11 of app/views/tasks/list.html.erb:
+8: </head>
+9: <body>
+10: <div>
+11: <% @users.each do | user | %>
+12: <p><%= user.name %></p>
+13: <% end %>   
+14: </div>
+
+    app/views/tasks/list.html.erb:11
+    c:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    c:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    c:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    c:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    c:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    c:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    c:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    c:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    c:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    c:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (343.8ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing WelcomeController#login (for 127.0.0.1 at 2012-01-09 03:22:58) [GET]
+Rendering welcome/login
+Completed in 31ms (View: 31, DB: 0) | 200 OK [http://localhost/]
+  [4;35;1mUser Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing WelcomeController#verifylogin (for 127.0.0.1 at 2012-01-09 03:23:03) [POST]
+  Parameters: {"commit"=>"sign in", "authenticity_token"=>"Dt0qeMixgNoSZKar/muB1flmrmQPkOGiouKkxpDBYdg=", "username"=>"mani", "password"=>"mani"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (name='mani' and password='mani') LIMIT 1[0m
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mRole Load (0.0ms)[0m   [0mSELECT * FROM `roles` WHERE (id=2) LIMIT 1[0m
+  [4;36;1mRole Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `roles`[0m
+Redirected to http://localhost:3000/taskslist
+Completed in 62ms (DB: 0) | 302 Found [http://localhost/verifylogin]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing TasksController#list (for 127.0.0.1 at 2012-01-09 03:23:03) [GET]
+  [4;36;1mTask Load (0.0ms)[0m   [0;1mSELECT * FROM `tasks` WHERE (createdby in (NULL)) [0m
+Rendering tasks/list
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.each) on line #11 of app/views/tasks/list.html.erb:
+8: </head>
+9: <body>
+10: <div>
+11: <% @tasks.each do | task | %>
+12: <p><%= task.taskname %></p>
+13: <% end %>   
+14: </div>
+
+    app/views/tasks/list.html.erb:11
+    c:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    c:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    c:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    c:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    c:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    c:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    c:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    c:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    c:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    c:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (218.8ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing WelcomeController#login (for 127.0.0.1 at 2012-01-09 03:24:00) [GET]
+Rendering welcome/login
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://localhost/]
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing WelcomeController#login (for 127.0.0.1 at 2012-01-09 03:24:01) [GET]
+Rendering welcome/login
+Completed in 16ms (View: 16, DB: 0) | 200 OK [http://localhost/]
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing WelcomeController#verifylogin (for 127.0.0.1 at 2012-01-09 03:24:08) [POST]
+  Parameters: {"commit"=>"sign in", "authenticity_token"=>"Dt0qeMixgNoSZKar/muB1flmrmQPkOGiouKkxpDBYdg=", "username"=>"mani", "password"=>"mani"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (name='mani' and password='mani') LIMIT 1[0m
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mRole Load (0.0ms)[0m   [0mSELECT * FROM `roles` WHERE (id=2) LIMIT 1[0m
+  [4;36;1mRole Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `roles`[0m
+Redirected to http://localhost:3000/taskslist
+Completed in 62ms (DB: 0) | 302 Found [http://localhost/verifylogin]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing TasksController#list (for 127.0.0.1 at 2012-01-09 03:24:08) [GET]
+  [4;36;1mTask Load (0.0ms)[0m   [0;1mSELECT * FROM `tasks` WHERE (createdby in (NULL)) [0m
+Rendering tasks/list
+Completed in 31ms (View: 0, DB: 0) | 200 OK [http://localhost/taskslist]
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing TasksController#list (for 127.0.0.1 at 2012-01-09 03:24:38) [GET]
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mTask Load (0.0ms)[0m   [0;1mSELECT * FROM `tasks` WHERE (createdby in (2)) [0m
+Rendering tasks/list
+  [4;35;1mTask Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `tasks`[0m
+Completed in 62ms (View: 16, DB: 0) | 200 OK [http://localhost/taskslist]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing WelcomeController#login (for 127.0.0.1 at 2012-01-09 03:27:06) [GET]
+Rendering welcome/login
+Completed in 47ms (View: 31, DB: 0) | 200 OK [http://localhost/]
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing WelcomeController#verifylogin (for 127.0.0.1 at 2012-01-09 03:27:12) [POST]
+  Parameters: {"commit"=>"sign in", "authenticity_token"=>"Dt0qeMixgNoSZKar/muB1flmrmQPkOGiouKkxpDBYdg=", "username"=>"vinoth", "password"=>"vinoth"}
+  [4;35;1mUser Load (15.6ms)[0m   [0mSELECT * FROM `users` WHERE (name='vinoth' and password='vinoth') LIMIT 1[0m
+  [4;36;1mUser Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mRole Load (0.0ms)[0m   [0mSELECT * FROM `roles` WHERE (id=1) LIMIT 1[0m
+  [4;36;1mRole Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `roles`[0m
+Redirected to http://localhost:3000/userslist
+Completed in 78ms (DB: 47) | 302 Found [http://localhost/verifylogin]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#list (for 127.0.0.1 at 2012-01-09 03:27:13) [GET]
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` [0m
+Rendering users/list
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://localhost/userslist]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#list (for 127.0.0.1 at 2012-01-09 03:27:32) [GET]
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` [0m
+Rendering users/list
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+
+ActionView::TemplateError (can't convert Fixnum into String) on line #12 of app/views/users/list.html.erb:
+9: <body>
+10: <div>
+11: <% @users.each do | user | %>
+12: <p><%= link_to user.name, "/tasklist/"+user.id %></p>
+13: <% end %>   
+14: </div>
+15: </body>
+
+    app/views/users/list.html.erb:12:in `+'
+    app/views/users/list.html.erb:12
+    app/views/users/list.html.erb:11:in `each'
+    app/views/users/list.html.erb:11
+    c:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    c:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    c:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    c:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    c:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    c:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    c:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    c:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    c:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    c:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (203.1ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#list (for 127.0.0.1 at 2012-01-09 03:28:11) [GET]
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` [0m
+Rendering users/list
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Completed in 250ms (View: 234, DB: 0) | 200 OK [http://localhost/userslist]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-01-09 03:28:14) [GET]
+
+ActionController::RoutingError (No route matches "/tasklist/1" with {:method=>:get}):
+  c:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-01-09 03:28:20) [GET]
+
+ActionController::RoutingError (No route matches "/tasklist/2" with {:method=>:get}):
+  c:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#list (for 127.0.0.1 at 2012-01-09 03:33:14) [GET]
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` [0m
+Rendering users/list
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Completed in 62ms (View: 31, DB: 0) | 200 OK [http://localhost/userslist]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-01-09 03:33:17) [GET]
+
+ActionController::RoutingError (No route matches "/tasklist/1" with {:method=>:get}):
+  c:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-01-09 03:33:21) [GET]
+
+ActionController::RoutingError (No route matches "/tasklist/2" with {:method=>:get}):
+  c:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing WelcomeController#login (for 127.0.0.1 at 2012-01-09 03:33:26) [GET]
+Rendering welcome/login
+Completed in 31ms (View: 31, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing WelcomeController#login (for 127.0.0.1 at 2012-01-09 03:33:29) [GET]
+Rendering welcome/login
+Completed in 16ms (View: 16, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing WelcomeController#login (for 127.0.0.1 at 2012-01-09 03:33:30) [GET]
+Rendering welcome/login
+Completed in 16ms (View: 16, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing WelcomeController#verifylogin (for 127.0.0.1 at 2012-01-09 03:33:40) [POST]
+  Parameters: {"commit"=>"sign in", "authenticity_token"=>"Dt0qeMixgNoSZKar/muB1flmrmQPkOGiouKkxpDBYdg=", "username"=>"vinoth", "password"=>"vinoth"}
+  [4;36;1mUser Load (15.6ms)[0m   [0;1mSELECT * FROM `users` WHERE (name='vinoth' and password='vinoth') LIMIT 1[0m
+  [4;35;1mUser Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mRole Load (0.0ms)[0m   [0;1mSELECT * FROM `roles` WHERE (id=1) LIMIT 1[0m
+  [4;35;1mRole Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `roles`[0m
+Redirected to http://localhost:3000/userslist
+Completed in 62ms (DB: 47) | 302 Found [http://localhost/verifylogin]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#list (for 127.0.0.1 at 2012-01-09 03:33:40) [GET]
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` [0m
+Rendering users/list
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://localhost/userslist]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-01-09 03:33:42) [GET]
+
+ActionController::RoutingError (No route matches "/tasklist/2" with {:method=>:get}):
+  c:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing WelcomeController#login (for 127.0.0.1 at 2012-01-09 03:35:04) [GET]
+Rendering welcome/login
+Completed in 31ms (View: 31, DB: 0) | 200 OK [http://localhost/]
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing WelcomeController#verifylogin (for 127.0.0.1 at 2012-01-09 03:35:10) [POST]
+  Parameters: {"commit"=>"sign in", "authenticity_token"=>"Dt0qeMixgNoSZKar/muB1flmrmQPkOGiouKkxpDBYdg=", "username"=>"vinoth", "password"=>"vinoth"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (name='vinoth' and password='vinoth') LIMIT 1[0m
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mRole Load (0.0ms)[0m   [0mSELECT * FROM `roles` WHERE (id=1) LIMIT 1[0m
+  [4;36;1mRole Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `roles`[0m
+Redirected to http://localhost:3000/userslist
+Completed in 94ms (DB: 16) | 302 Found [http://localhost/verifylogin]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#list (for 127.0.0.1 at 2012-01-09 03:35:11) [GET]
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` [0m
+Rendering users/list
+  [4;35;1mUser Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Completed in 62ms (View: 16, DB: 16) | 200 OK [http://localhost/userslist]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing TasksController#list (for 127.0.0.1 at 2012-01-09 03:35:13) [GET]
+  Parameters: {"user_id"=>"2"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (id='2') LIMIT 1[0m
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mTask Load (0.0ms)[0m   [0mSELECT * FROM `tasks` WHERE (createdby in (2)) [0m
+Rendering tasks/list
+  [4;36;1mTask Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `tasks`[0m
+Completed in 109ms (View: 31, DB: 0) | 200 OK [http://localhost/taskslist/2]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing TasksController#list (for 127.0.0.1 at 2012-01-09 03:35:16) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (id='1') LIMIT 1[0m
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mTask Load (15.6ms)[0m   [0;1mSELECT * FROM `tasks` WHERE (createdby in (1)) [0m
+Rendering tasks/list
+  [4;35;1mTask Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `tasks`[0m
+Completed in 62ms (View: 16, DB: 16) | 200 OK [http://localhost/taskslist/1]

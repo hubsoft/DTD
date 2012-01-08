@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>
+User List
+</title>
+<%= stylesheet_link_tag :all %>
+</head>
+<body>
+<div>
+<% @users.each do | user | %>
+<p><%= link_to user.name, "/taskslist/"+user.id.to_s %></p>
+<% end %>   
+</div>
+</body>
+</html>
